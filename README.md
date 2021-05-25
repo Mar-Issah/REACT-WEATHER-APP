@@ -59,11 +59,13 @@ If these commands print out a version number in the terminal, you are good to go
 <!-- USAGE EXAMPLES -->
 
 ## Usage
-When you enter name of a lpcation results get displayed
+When you enter name of a location results get displayed
 
 ![React Weather App](https://res.cloudinary.com/dytnpjxrd/image/upload/v1621906991/weatherAPP2_to2x1m.png)
 
+When you select a location you can view the consolidated data displayed in a modal
 
+![React Weather App](https://res.cloudinary.com/dytnpjxrd/image/upload/v1621971551/weatherApp3_a3frep.png)
 <!-- LICENSE -->
 
 ## License :page_facing_up:
