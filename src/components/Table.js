@@ -36,7 +36,6 @@ function Table({ locations }) {
 							<tr
 								key={location.woeid}
 								className="table-row"
-								id="trigger-modal"
 								data-bs-toggle="modal"
 								data-bs-target="#myModal"
 								return
