@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
 import axios from "axios";
+import london from "./defaultState";
 
 //pass down the locations to the table component as props, use data to populate table
+//set default state to london to avoid undefined/null
 function Table({ locations }) {
-	const [consolidatedData, setconsolidatedData] = useState({});
+	const [consolidatedData, setconsolidatedData] = useState(london);
 
 	//async/await function to retrieve the data after api request
 	const handleClick = async (locId) => {
@@ -12,7 +14,6 @@ function Table({ locations }) {
 			.get(`https://www.metaweather.com/api/location/${locId}`)
 			.then((res) => {
 				setconsolidatedData(res.data);
-				// console.log(consolidatedData);
 			})
 			.catch((err) => {
 				console.log(err);
@@ -21,15 +22,24 @@ function Table({ locations }) {
 
 	return (
 		<div>
+			<table className="table table-hover">
+				<thead>
+					<tr className="table-head">
+						<th scope="col">Location Name</th>
+						<th scope="col">Location Type</th>
+						<th scope="col">Latt_Long</th>
+					</tr>
+				</thead>
+			</table>
 			<div id="table-container">
 				<table className="table table-hover">
-					<thead>
+					{/* <thead>
 						<tr className="table-head">
 							<th scope="col">Location Name</th>
 							<th scope="col">Location Type</th>
 							<th scope="col">Latt_Long</th>
 						</tr>
-					</thead>
+					</thead> */}
 					<tbody>
 						{/* javascript array map function to return each row */}
 						{locations.map((location) => (
@@ -38,11 +48,7 @@ function Table({ locations }) {
 								className="table-row"
 								data-bs-toggle="modal"
 								data-bs-target="#myModal"
-								return
-								the
-								function
-								on
-								click
+								// pass the id to the function on click
 								onClick={() => handleClick(location.woeid)}
 							>
 								<td>{location.title}</td>
@@ -52,11 +58,10 @@ function Table({ locations }) {
 						))}
 					</tbody>
 				</table>
-				{/* conditional rendering to render Modal only when data is available*/}
 
-				{typeof consolidatedData.main !== "undefined" && (
+				<div id="modal-container">
 					<Modal consolidatedData={consolidatedData} />
-				)}
+				</div>
 			</div>
 		</div>
 	);
