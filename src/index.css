@@ -1,0 +1,120 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+:root {
+	--default-gray: #808080;
+	--primary-white: #fff;
+	--secondary-white: #e0dada;
+	--primary-black: #000;
+	--primary-gray: #343a40;
+	--ff-poppins: "Poppins", sans-serif;
+	--box-shadow: 3px 3px 3px rgb(0, 0, 0);
+}
+
+/* GLOBAL */
+html,
+body {
+	box-sizing: border-box;
+	margin: 0%;
+	padding: 0;
+}
+
+/* MAIN-VIEW */
+.weather-container {
+	background: url("https://res.cloudinary.com/dytnpjxrd/image/upload/b_rgb:151313,o_50/v1621614006/pexels-pixabay-209831_ewsozd.jpg")
+		no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	width: 100vw;
+	font-family: var(--ff-poppins);
+}
+.heading {
+	padding-top: 0.75rem;
+	color: var(--default-gray);
+}
+/* FORM */
+.input-group {
+	padding-top: 1.25rem;
+}
+.form-control {
+	background-color: var(--secondary-white) !important;
+	padding: 0.75rem 0.5rem !important;
+}
+
+.btn:active {
+	transform: scale(0.95);
+}
+
+.data-view {
+	color: var(--secondary-white);
+}
+.footer-text {
+	color: var(--secondary-white);
+	font-style: italic;
+	font-size: 0.75rem;
+	padding-right: 0.725rem !important;
+}
+
+/* TABLE */
+table {
+	color: var(--secondary-white) !important;
+}
+
+#table-container {
+	display: block;
+	height: 63vh;
+	overflow: auto;
+}
+.table-head {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.table-row {
+	cursor: pointer;
+}
+
+/* SUB-VIEW */
+#sub-view {
+	display: block;
+}
+
+.subview-content {
+	width: 50vw;
+	height: 75vh;
+	color: var(--secondary-white) !important;
+}
+.modal-title {
+	padding-left: 20%;
+}
+
+.icon {
+	width: 8.55rem;
+	height: 7.55rem;
+}
+
+.deg-celcius {
+	font-weight: bold;
+	margin-left: 1.75rem;
+	margin-top: 1rem;
+}
+
+.data-container {
+	width: 60%;
+	margin-top: 1.25rem;
+}
