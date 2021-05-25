@@ -22,24 +22,15 @@ function Table({ locations }) {
 
 	return (
 		<div>
-			<table className="table table-hover">
-				<thead>
-					<tr className="table-head">
-						<th scope="col">Location Name</th>
-						<th scope="col">Location Type</th>
-						<th scope="col">Latt_Long</th>
-					</tr>
-				</thead>
-			</table>
 			<div id="table-container">
 				<table className="table table-hover">
-					{/* <thead>
+					<thead>
 						<tr className="table-head">
 							<th scope="col">Location Name</th>
 							<th scope="col">Location Type</th>
 							<th scope="col">Latt_Long</th>
 						</tr>
-					</thead> */}
+					</thead>
 					<tbody>
 						{/* javascript array map function to return each row */}
 						{locations.map((location) => (
