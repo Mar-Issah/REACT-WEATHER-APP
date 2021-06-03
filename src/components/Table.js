@@ -8,10 +8,10 @@ import london from "./defaultState";
 function Table({ locations }) {
 	const [consolidatedData, setconsolidatedData] = useState(london);
 
-	//async/await function to retrieve the data after api request
+	//async/await function using axios, gets data from backend server
 	const handleClick = async (locId) => {
 		await axios
-			.get(`https://www.metaweather.com/api/location/${locId}`)
+			.get(`http://localhost:5000/data/${locId}`)
 			.then((res) => {
 				setconsolidatedData(res.data);
 			})

@@ -26,7 +26,7 @@ function Modal({ consolidatedData }) {
 					<div className="modal-content">
 						<div className="modal-header">
 							<h3 className="modal-title" id="myModalLabel">
-								{title + ", " + date}
+								{title + " , " + date}
 							</h3>
 							<button
 								type="button"
@@ -37,9 +37,10 @@ function Modal({ consolidatedData }) {
 						</div>
 						<div>
 							<div className="image-container d-flex justify-content-center mt-3">
+								{/* get the weather_state_abbr from the consolidatedWeather to add to the src to retrieve the icon */}
 								<img
 									className="icon"
-									src={`https://www.metaweather.com//static/img/weather/${consolidatedWeather.weather_state_abbr}.svg`}
+									src={`https://www.metaweather.com/static/img/weather/${consolidatedWeather.weather_state_abbr}.svg`}
 									alt={consolidatedWeather.weather_state_name}
 								/>
 								<div className="deg-celcius">

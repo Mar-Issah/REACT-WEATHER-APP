@@ -1,37 +1,28 @@
 import React, { useState } from "react";
 import Table from "./Table";
+import axios from "axios";
 
 function Weather() {
 	const [locations, setLocations] = useState([]);
 	const [locationName, setLocationName] = useState("");
 
 	//on form submit, call the handleSubmit method
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
 
-		//had CORS errors using axios so created a new XMLHttpRequest
-		let xhr = new XMLHttpRequest();
-		xhr.open(
-			"GET",
-			`https://www.metaweather.com/api/location/search/?query=${locationName}`
-		);
-
-		xhr.responseType = "json";
-		xhr.send();
-		xhr.onload = () => {
-			let responseObj = xhr.response;
-
-			//if there is no search result set the array to empty and display alert
-			if (responseObj.length === 0) {
-				setLocations([]);
-				alert("No location found");
-				return;
-			}
-			//if data is available populate array with data
-			if (responseObj) {
-				setLocations(responseObj);
-			}
-		};
+		await axios
+			.get(`http://localhost:5000/weather/${locationName}`)
+			.then((res) => {
+				if (res.data.length === 0) {
+					setLocations([]);
+					alert("No location found");
+					return;
+				}
+				setLocations(res.data);
+			})
+			.catch((err) => {
+				console.log(err);
+			});
 	};
 
 	return (
