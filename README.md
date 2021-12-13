@@ -45,7 +45,7 @@ If these commands print out a version number in the terminal, you are good to go
    git clone https://github.com/Mar-Issah/REACT-WEATHER-APP.git
    ```
 2. Download and install [Visual Studio Code](https://code.visualstudio.com/).
-3. Change directory into the new folder and type the following, this installs the required dependencies
+3. Change directory into the new folder and type the following, this installs the required dependencies.
     ```sh
     npm install
    ```
