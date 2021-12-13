@@ -1,5 +1,5 @@
 # React Weather App
-A Single Page Application built with React.js to demonstrate JavaScript Skills
+A Single Page Application built with React.js to demonstrate JavaScript Skills.
 
 ## About The Project
 This is a project which gives user city names and current weather condition based on search.
@@ -40,11 +40,11 @@ If these commands print out a version number in the terminal, you are good to go
 
 ### Installation
 
-1. Clone the repo on your local machine
+1. Clone the repo on your local machine.
    ```sh
    git clone https://github.com/Mar-Issah/REACT-WEATHER-APP.git
    ```
-2. Download and install [Visual Studio Code](https://code.visualstudio.com/)
+2. Download and install [Visual Studio Code](https://code.visualstudio.com/).
 3. Change directory into the new folder and type the following, this installs the required dependencies
     ```sh
     npm install
