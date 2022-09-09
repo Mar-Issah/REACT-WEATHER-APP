@@ -1,5 +1,5 @@
 # React Weather App
-A Single Page Application built with React.js to demonstrate JavaScript Skills.
+A Single Page application built with React.js to demonstrate JavaScript skills.
 
 ## About The Project
 This is a project which gives user city names and current weather condition based on search.
